@@ -1,0 +1,23 @@
+.fa{
+    font-size:35px;
+    color: #23222d;
+}
+
+.list-group{
+    max-height: 400px;
+    overflow-y:scroll; 
+}
+
+.fa-check-square-o:hover{
+    color: green;
+   
+}
+.fa-trash-o:hover{
+   
+    color: red
+}
+
+.fa-check{
+    color: green;
+    z-index: 1000
+}

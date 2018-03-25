@@ -1,0 +1,39 @@
+input , select{
+    border: solid 1px #67868E;
+}
+
+button{
+    border: solid 1px #67868E;
+    font-weight: 300;
+    border-radius: 0px !important;
+    background-color: #30739c;
+    width: 15%;
+    padding: 10px 10px 10px
+}
+
+button:hover{
+    color: white;
+    font-weight: 300;
+    background-color:#23222d;
+}
+
+@media(max-width: 1580px) {
+    button{
+        width: 15%;
+        padding: 10px 10px 10px
+    }
+   
+  }
+  @media(max-width: 990px ) {
+    button {
+        width: 20%;
+        padding: 10px 10px 10px
+    }
+}
+
+  @media(max-width: 750px) {
+    button {
+        width: 40%;
+        padding: 10px 10px 10px
+    }
+  }

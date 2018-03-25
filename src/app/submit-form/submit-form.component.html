@@ -1,0 +1,38 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-12 ">
+    <h1 class="display-4">Create Event</h1>
+    <form #todoForm="ngForm" class="" (ngSubmit)="create(todoForm)">
+      <div class="form-row d-flex justify-content-center ">
+        <div class="form-group col-md-6 ">
+          <label class="d-flex justify-content-left" for="inputEmail4">Event Title</label>
+          <input type="text" name="title" id="title"  #title="ngModel" [ngClass]="{'is-invalid':title.invalid && (title.dirty || title.touched || isINValid) }" [(ngModel)]="newTodo.title" class="form-control" placeholder="Event Title" required>
+        </div>
+      </div>
+
+      <div class="form-row d-flex justify-content-center ">
+          <div class="form-group col-md-6 ">
+            <label class="d-flex justify-content-left" for="inputEmail4">Event Description</label>
+            <input name="description" type="text" id="description" #description="ngModel" [ngClass]="{'is-invalid':description.invalid && (description.dirty || description.touched || isINValid) }" [(ngModel)]="newTodo.description" class="form-control" placeholder="Event Description" required>
+          </div>
+        </div>
+
+      <div class="form-row d-flex justify-content-center">
+        <div class="form-group col-md-6">
+          <label class="d-flex justify-content-left" for="inputState">Event Criticality</label>
+          <select id="inputState" name="priority" id="priority" #priority="ngModel" [ngClass]="{'is-invalid':priority.invalid && (priority.dirty || priority.touched || isINValid) }" [(ngModel)]="newTodo.priority" class="form-control" required>
+          <option value="">Please Select the Criticality of the event ...</option>
+          <option value="C">Critical</option>
+          <option value="M">Moderate</option>
+
+        </select>
+        </div>
+      </div>
+
+      <button type="submit"  class="btn btn-primary">Create Event</button>
+    </form>
+      </div>
+  </div>
+  </div>
+</div>

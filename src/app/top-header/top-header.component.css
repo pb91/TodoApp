@@ -1,0 +1,30 @@
+/* site banner */
+.top-site-banner {
+    background-color: #248EC7;
+    color: #fff;
+    padding: 10px 0px 1px;
+  }
+  
+  a.top-site-banner-button {
+    border-radius: 4px;
+    font-size: 0.85em;
+    padding: 3px 20px;
+    background-color: #30739C;
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  a.top-site-banner-button:hover {
+    text-decoration: none;
+    background-color: #2A4E68;
+    color: white;
+  }
+  a.top-site-banner-button:visited {
+    color: white;
+  }
+  /* end of site banner */
+  
+
+
+

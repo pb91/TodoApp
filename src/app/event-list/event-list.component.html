@@ -1,0 +1,27 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12 ">
+      <h1 class="display-4">Event List</h1>
+      <div class="list-group">
+          <span *ngFor="let todo of todosList" class="list-group-item list-group-item-action flex-column align-items-start ">
+            <div class="d-flex w-100 justify-content-between">
+              <small *ngIf="todo.priority == 'C' " class="badge badge-danger justify-content-center">Critical</small>
+              <small *ngIf="todo.priority == 'M' " class="badge badge-warning justify-content-center">Moderate</small>
+              
+              <h5 class="mb-1 d-flex flex-wrap d-flex justify-content-center">{{todo.title}}</h5>
+              <small class="d-flex d-flex flex-wrap justify-content-right">{{todo.date | date}} <i *ngIf="todo.status" class="fa fa-check" aria-hidden="true"></i></small>
+            </div>
+            <p class="mb-1 d-flex flex-wrap d-flex justify-content-center">{{todo.description}}</p>
+           
+            <div *ngIf="!todo.status" class="d-flex d-flex align-items-end justify-content-center">
+                <span (click)="doneTodo(todo)" ><i class="fa fa-check-square-o"></i> </span><br><span (click)="deleteTodo(todo)"> <i class="fa fa-trash-o"></i></span>
+            </div>
+            
+          </span>
+        </div>
+  
+        </div>
+    </div>
+    </div>
+  </div>

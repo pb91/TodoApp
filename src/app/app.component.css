@@ -1,0 +1,69 @@
+
+
+  .customers-row {
+    padding: 5% 0;
+    text-align: center;
+    }
+
+    .card{
+        width: 30%;border: solid 1px #67868E;
+      
+    }
+    .card:hover{
+        background-color:#23222d;
+        border: solid 3px #248ec7;
+    }
+
+
+    .card.active {
+        background-color:#23222d;
+        border: solid 3px #248ec7;
+    }
+
+    
+
+    .customer-logos-wrapper {
+        margin: 15px 0;
+        text-align: center;
+        }
+
+        .customer-logos {
+            margin-left: 0.5%;
+            padding: 20px 0 5px;
+            width: 15%;
+            }
+
+            .customer-logos {
+                margin-left: 0.5%;
+                padding: 20px 0 5px;
+                width: 15%;
+                }
+
+          
+          .logo-hover {
+            background: #dee2e8;
+            border-radius: 3px;
+            }
+          
+          .logo-hover:after {
+            height: 0;
+            position: absolute;
+            width: 0;
+            border: 10px solid transparent;
+            border-top-color: #dee2e8;
+            top: 100%;
+            left: 50%;
+            margin-left: -10px; }
+
+
+            @media(max-width: 1580px) {
+                .subtext{
+                  display: block;
+                }
+               
+              }
+              @media(max-width: 980px) {
+               .subtext {
+                    display: none;
+                }
+              }

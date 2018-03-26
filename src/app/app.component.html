@@ -28,11 +28,18 @@
                   <span class="subtext">Click to view all events!!</span>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 d-flex justify-content-center">
+          <span *ngIf="save" class="alert alert-success">Your ToDo has been created!! </span>  
+          </div>
+        </div>
         <!-- Submit form component -->
-        <app-submit-form  (resetForm)="toggelForm = !toggelForm" *ngIf="toggelForm"></app-submit-form>
+        <app-submit-form  (resetForm)="formClose()" *ngIf="toggelForm"></app-submit-form>
         <!-- Event List component -->
         <app-event-list  *ngIf="toggelList"> </app-event-list>
         <span class="scroll"></span>

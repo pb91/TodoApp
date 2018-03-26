@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   toggelForm : boolean = false;
   toggelList : boolean = false;
   color:string = '';
+  save: boolean =false;
   @ViewChild('win') win: ElementRef;
 
 
@@ -45,6 +46,16 @@ export class AppComponent implements OnInit {
     let element = this.win.nativeElement.querySelector(".scroll");
     console.log("element" , element);
     this.scrollService.scrollTo(element);
+  }
+
+  formClose(){
+    this.save = true;
+    this.toggelForm = !this.toggelForm;
+
+    setTimeout(()=>{
+      this.save =false
+    } , 5000)
+
   }
 
   

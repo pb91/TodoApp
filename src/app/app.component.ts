@@ -2,6 +2,8 @@ import { Response } from '@angular/http';
 import { TodoService } from './services/todo.service';
 import ToDo from './models/todo.model';
 import { Component, OnInit } from '@angular/core';
+import { ScrollToService } from 'ng2-scroll-to-el';
+import {ElementRef , ViewChild} from '@angular/core'
 
 @Component({
   selector: 'app-root',
@@ -11,11 +13,12 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   constructor(
-    private todoService: TodoService
+    private todoService: TodoService ,private scrollService: ScrollToService
   ) { }
   toggelForm : boolean = false;
   toggelList : boolean = false;
   color:string = '';
+  @ViewChild('win') win: ElementRef;
 
 
   ngOnInit(): void {
@@ -36,5 +39,14 @@ export class AppComponent implements OnInit {
       this.toggelForm = !this.toggelForm;
     }
   }
+
+  scrollTo(){
+
+    let element = this.win.nativeElement.querySelector(".scroll");
+    console.log("element" , element);
+    this.scrollService.scrollTo(element);
+  }
+
+  
 
 }

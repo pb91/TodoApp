@@ -1,4 +1,5 @@
-import { Directive , ElementRef , HostListener , Renderer} from '@angular/core';
+import { Directive , ElementRef , HostListener , Renderer ,Output , EventEmitter} from '@angular/core';
+
 
 @Directive({
   selector: '[appHiglighter]'
@@ -6,6 +7,7 @@ import { Directive , ElementRef , HostListener , Renderer} from '@angular/core';
 export class HiglighterDirective {
 
   constructor(private el: ElementRef,private renderer: Renderer) { }
+  @Output() scroll: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   @HostListener('mouseover') onMouseOver() {
     let part = this.el.nativeElement.querySelector('.card-body h2');
@@ -15,6 +17,12 @@ export class HiglighterDirective {
   @HostListener('mouseout') onMouseOut() {
     let part = this.el.nativeElement.querySelector('.card-body h2');
     this.renderer.setElementStyle(part, 'color', '');
+  }
+
+  @HostListener('click') onclick(){
+    
+     this.scroll.emit();
+  
   }
 
 }

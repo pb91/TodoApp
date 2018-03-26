@@ -13,6 +13,8 @@ import { HiglighterDirective } from './higlighter.directive';
 import { SubmitFormComponent } from './submit-form/submit-form.component';
 import { EventListComponent } from './event-list/event-list.component';
 
+import { ScrollToModule } from 'ng2-scroll-to-el';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { EventListComponent } from './event-list/event-list.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ScrollToModule.forRoot()
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]
